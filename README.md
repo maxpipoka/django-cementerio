@@ -3,7 +3,18 @@ Proyecto en Django para registro, búsqueda, y liquidación de deudas de sector 
 
 Este módulo es de práctica y entrenamiento en el framework Django como también en Python.
 
-La finalidad es desarrollar un módulo de gestión para administrar el registro de pagos de derechos en la oficina de cementerio del sector Recaudaciones de la Municipalidad de San José.
+Problema
+Es necesario contar con un sistema de gestión online, que permita registrar la actividad de la Oficina de cobros de Cementerio del Sector Recaudaciones.
+
+La citada oficina realiza el cobro de derechos en concepto de Inhumacion y arrendamiento de parcelas y nichos en el cementerio local. Es necesario registrar, tanto, estos cobros como la información relacionada con ellos de manera ágil y que permita su búsqueda y referencia.
+
+Tambien es necesario procesar la información de los cobros, de manera de obtener fechas de vencimiento, liquidación de recargos en caso de mora en los pagos teniendo en cuenta las variaciones en los montos de las tasas y las fechas en las que entran en vigor, estado de deudas y futuros informes gerenciales.
+
+Información relacionada con los cobros:
+- Fallecimientos.
+- Contribuyentes.
+- Parcelas y nichos en el cementerio.
+- Montos de las tasas proveniente de la ordenanza fiscal.
 
 Toda la información se volcará a una DB Sql. A la cual se le cargarán datos reales para el desarrollo.
 
