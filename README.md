@@ -23,7 +23,7 @@ Funcionalidades--
 Diseño DB SQL:
 
 TABLA PAGOS
-- id_registro: entero autoincremental.
+- id_registro: entero autoincremental
 - fecha_fallecimiento: fecha, null
 - fecha_pago: fecha, not null
 - recibo: entero, not null
