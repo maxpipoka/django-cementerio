@@ -8,7 +8,7 @@ Es necesario contar con un sistema de gestión online, que permita registrar la 
 
 La citada oficina realiza el cobro de derechos en concepto de Inhumacion y arrendamiento de parcelas y nichos en el cementerio local. Es necesario registrar, tanto, estos cobros como la información relacionada con ellos de manera ágil y que permita su búsqueda y referencia.
 
-Modelos de datos
+## Modelos de datos
 ### Pago: 
 - Fecha del pago. 
 - Datos del recibo de recaudación.
@@ -16,8 +16,8 @@ Modelos de datos
 - Contribuyente a nombre de quien se realiza el recibo de recaudación. 
 - Datos de la parcela o nicho.
 - Fecha de vencimiento del pago realizado.
-- Un campo de texto para consignar el periodo o concepto abonado.
-- Un campo de texto para consignar observaciones del pago.
+- Observación sobre el período o concepto abonado.
+- Obsercacion anexa del pago (persona que abona es diferente a la que figura como contribuyente, etc.).
 
 ### Recibo:
 - Número de Recibo.
@@ -26,46 +26,48 @@ Modelos de datos
 - Recargos si corresponden.
 
 ### Parcela o nicho:
-- Número
-- Fila
-- Sector
-- Zona
+- Número.
+- Fila.
+- Sector.
+- Zona.
 
 ### Permiso Inhumacion (PDI):
-- Fecha de gestión en el Registro Provincial de las Personas (RPP)
-- Oficina del RPP donde se realizó la gestión
-- Departamento de ubicación de la oficina del RPP
-- Fecha presentación en oficina municipal
-- Fallecido
-- Dni Fallecido
-- Fecha fallecimiento
-- Persona que hace la presentación
-- Observaciones
-- Imágen del PDI
+- Fecha de gestión en el Registro Provincial de las Personas (RPP).
+- Oficina del RPP donde se realizó la gestión.
+- Departamento de ubicación de la oficina del RPP.
+- Fecha presentación en oficina municipal.
+- Fallecido.
+- Dni Fallecido.
+- Fecha fallecimiento.
+- Persona que hace la presentación.
+- Observaciones.
+- Imágen del PDI.
 
 ### Contribuyente:
-- Nombre
-- Dni
+- Nombre.
+- Dni.
 
 ### Fallecido:
-- Nombre
-- Dni
+- Nombre.
+- Dni.
 
 ### Tasa:
-- Zona
-- Periodicidad
-- Monto
+- Zona.
+- Periodicidad.
+- Monto.
 - Fecha desde cuando se aplica.
 - Fecha hasta cuando se aplica.
 
 ### Usuario:
-- Usuario
-- Nombre
-- Password
+- Usuario.
+- Nombre.
+- Password.
 - Nivel acceso.
 
 
-Funcionalidades--
+## Funcionalidades necesarias
+### Pagos:
+- 
 
 - Se debe listar los registros de pago, ordenados por fecha de pago de manera descentende.
 - El listado deberá tener paginación por razones de rendimiento.
