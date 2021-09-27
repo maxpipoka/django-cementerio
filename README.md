@@ -8,7 +8,8 @@ Es necesario contar con un sistema de gestión online, que permita registrar la 
 
 La citada oficina realiza el cobro de derechos en concepto de Inhumacion y arrendamiento de parcelas y nichos en el cementerio local. Es necesario registrar, tanto, estos cobros como la información relacionada con ellos de manera ágil y que permita su búsqueda y referencia.
 
-### Cada registro "Pago" debe contener los campos: 
+Modelos de datos
+### Pago: 
 - Fecha del pago. 
 - Datos del recibo de recaudación.
 - Nombre del o los fallecidos alojados en la parcela o nicho. 
@@ -18,25 +19,51 @@ La citada oficina realiza el cobro de derechos en concepto de Inhumacion y arren
 - Un campo de texto para consignar el periodo o concepto abonado.
 - Un campo de texto para consignar observaciones del pago.
 
-
-### De cada recibo se debe registrar:
+### Recibo:
 - Número de Recibo.
 - Contribuyente.
 - Monto de tasa.
 - Recargos si corresponden.
 
-### De cada parcela o nicho se debe registrar la siguiente informacion:
-- 
+### Parcela o nicho:
+- Número
+- Fila
+- Sector
+- Zona
 
-Tambien es necesario procesar la información de los cobros, de manera de obtener fechas de vencimiento futuras, liquidación de recargos en caso de mora en los pagos teniendo en cuenta las variaciones en los montos de las tasas y las fechas en las que entran en vigor, estado de deudas y futuros informes gerenciales.
+### Permiso Inhumacion (PDI):
+- Fecha de gestión en el Registro Provincial de las Personas (RPP)
+- Oficina del RPP donde se realizó la gestión
+- Departamento de ubicación de la oficina del RPP
+- Fecha presentación en oficina municipal
+- Fallecido
+- Dni Fallecido
+- Fecha fallecimiento
+- Persona que hace la presentación
+- Observaciones
+- Imágen del PDI
 
-Información relacionada con los cobros:
-- Fallecimientos.
-- Contribuyentes.
-- Parcelas y nichos en el cementerio.
-- Montos de las tasas proveniente de la ordenanza fiscal.
+### Contribuyente:
+- Nombre
+- Dni
 
-Toda la información se volcará a una DB Sql. A la cual se le cargarán datos reales para el desarrollo.
+### Fallecido:
+- Nombre
+- Dni
+
+### Tasa:
+- Zona
+- Periodicidad
+- Monto
+- Fecha desde cuando se aplica.
+- Fecha hasta cuando se aplica.
+
+### Usuario:
+- Usuario
+- Nombre
+- Password
+- Nivel acceso.
+
 
 Funcionalidades--
 
