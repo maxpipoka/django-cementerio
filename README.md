@@ -70,7 +70,7 @@ La citada oficina realiza el cobro de derechos en concepto de Inhumacion y arren
 - Cada pago debe poder registrarse a un solo contribuyente.
 - En el campo FALLECIDO puede ser una o mas personas, que serían las ocupante de la parcela o nicho. Pero cada pago puede ser por una sola parcela o nicho.
 - Los conceptos que se abonan son:
--- 
+    - 
 - Un pago puede ser por el período en curso, como tambien por períodos anteriores vencidos. (Ej. Actual 2021, o vencidos 2019, 2020.) En caso de ser por periodos anteriores vencidos la liquidacion de recargos se realiza por cada periodo independiente. No pudiendo aplicarse
 
 - Se debe listar los registros de pago, ordenados por fecha de pago de manera descentende.
