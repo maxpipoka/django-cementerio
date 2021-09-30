@@ -58,11 +58,18 @@ La citada oficina realiza el cobro de derechos en concepto de Inhumacion y arren
 - Fecha desde cuando se aplica.
 - Fecha hasta cuando se aplica.
 
+### Tasas que se abonan:
+- Derecho de Inhumación:
+    - 1ra zona
+    - 2da zona
+-
+
 ### Usuario:
 - Usuario.
 - Nombre.
 - Password.
 - Nivel acceso.
+
 
 
 ## Funcionalidades necesarias
