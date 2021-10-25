@@ -1,0 +1,3 @@
+- Crear el dominio y el adaptador en paralelo al django. Para poder hacer independiente la logica de negocio del framework.
+
+- En el Domain van los services y repositorios abstractos y otra adapter donde van los repositorios que se comunican con el django
