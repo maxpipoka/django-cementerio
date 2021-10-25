@@ -1,78 +1,79 @@
-*** Data Classes ***
-
-from dataclasses import dataclass,  
+from dataclasses import dataclass
 from datetime import date
 from typing import List
 
-@dataclass
-class Contribuyente:
+@dataclass(frozen=True)
+class Name:
+    name: str
+    surname: str
+
+@dataclass(frozen=True)
+class Taxpayer:
     dni: int
-    nombre: str
+    name: Name
 
 
-@dataclass
-class Fallecido(Contribuyente):
-    fecha_fallecimiento: date
-    menor: bool
+@dataclass(frozen=True)
+class Deceased(Taxpayer):
+    death_date: date
+    younger: bool
     
 
-@dataclass
-class Recibo:
-    numero: int
-    contribuyente: Contribuyente
-    monto: float
-    recargos: float
+@dataclass(frozen=True)
+class Receipt:
+    receipt_number: int
+    taxpayer: Taxpayer
+    amount: float
+    surcharge: float
 
 
-@dataclass
-class Parcela:
-    numero: int
-    fila: int
+@dataclass(frozen=True)
+class Plot:
+    plot_number: int
+    row: int
     sector: str
-    zona: str
+    zone: str
 
 
-@dataclass
+@dataclass(frozen=True)
 class Pdi:
-    fecha_registro: date
-    oficina_registro: str
-    departamento_registro: str
-    fecha_presentacion: date
-    fallecido: Fallecido
-    dni_fallecido: int
-    fecha_fallecimiento: date
-    tramitante: str
-    observaciones: str
-    imagen_pdi: str
+    register_date: date
+    register_office: str
+    register_depto: str
+    presentation_date: date
+    deceased: Deceased
+    presenter: Taxpayer
+    observations: str
+    pdi_image: str
 
 
-@dataclass
-class Tasa:
-    zona: str
-    periodicidad: int
-    monto: float
-    fecha_desde: date
-    fecha_hasta: date
+@dataclass(frozen=True)
+class Tax:
+    zone: str
+    periodicity: int
+    amount: float
+    date_from: date
+    date_to: date
 
 
-@dataclass
-class Usuario:
-    usuario: str
-    nombre: str
+@dataclass(frozen=True)
+class User:
+    user: str
+    user_name: Taxpayer
     password: str
-    nivel_acceso: str
+    access_level: str
 
 
-@dataclass
-class Pago:
-    fecha_pago: date
-    recibo: Recibo
-    fallecidos: List[Fallecido]
-    reserva: bool
-    contribuyente: Contribuyente
-    parcela: Parcela
-    fecha_vencimiento: date
-    observacion_periodo: str
-    observacion_anexa: str
+@dataclass(frozen=True)
+class Payment:
+    payment_date: date
+    receipt: Receipt
+    deceaseds: List[Deceased]
+    reservation: bool
+    taxpayer: Taxpayer
+    plot: Plot
+    due_date: date
+    period_observation: str
+    attached_observation: str
 
 
