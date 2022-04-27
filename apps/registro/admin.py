@@ -1,6 +1,8 @@
 from django.contrib import admin
-from . import models
+from .models import Contribuyente, Usuario, Fallecido
 
 # Register your models here.
 
-admin.site.register('Contribuyente', 'Usuario', 'Fallecido')
+admin.site.register(Contribuyente)
+admin.site.register(Usuario)
+admin.site.register(Fallecido)
