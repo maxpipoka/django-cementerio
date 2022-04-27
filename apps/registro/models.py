@@ -4,7 +4,7 @@ from django.db import models
 
 class Contribuyente(models.Model):
     nombre = models.CharField(max_length=250, blank= False, null=False)
-    dni = models.IntegerField(max_length=8, blank= False, null=False)
+    dni = models.IntegerField(blank= False, null=False)
     direccion = models.CharField(max_length=250, blank= False, null=False)
     
     class Meta:
@@ -20,7 +20,7 @@ class Usuario(models.Model):
     usuario = models.ForeignKey(Contribuyente, on_delete=models.CASCADE)
     nombre_usuario = models.CharField(max_length=50, blank=False, null=False)
     password = models.CharField(max_length=15, blank= False, null=False)
-    nivel_acceso = models.IntegerField(max_length=1, null=False)
+    nivel_acceso = models.IntegerField(blank=False, null=False)
     is_active = models.BooleanField
     is_staff = models.BooleanField
     
