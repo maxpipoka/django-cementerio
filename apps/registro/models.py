@@ -75,4 +75,62 @@ class PermisoInhumacion(models.Model):
     def __str__(self):
         return self.fallecido + '-' + self.fecha_presentacion
     
+class Zona(models.Model):
+    nombre = models.CharField(max_length=100, blank=False, null=False)
     
+    def __str__(self):
+        return self.nombre
+    
+    class Meta:
+        verbose_name = 'Zona'
+        verbose_name_plural = 'Zonas'
+        ordering = ['nombre']
+        
+
+class Periodicidad(models.Model):
+    nombre = models.CharField(max_length=100, blank= False, null=False)
+    cant_anios = models.IntegerField(blank=False, null=False)
+    
+    def __str__(self):
+        return self.nombre
+    
+    class Meta:
+        verbose_name = 'Periodicidad'
+        verbose_name_plural = 'Periodicidades'
+        ordering = ['nombre']
+        
+        
+class Parcela(models.Model):
+    numero = models.IntegerField(blank=False, null=False)
+    fila = models.IntegerField(blank=False, null=False)
+    sector = models.CharField(max_length=20, blank= False, null=False)
+    zona = models.ForeignKey(Zona, on_delete=models.PROTECT)
+    
+    def __str__(self):
+        return (self.Zona + ' - ' + self.sector + '-' + self.fila + ' - N:' + self.numero)
+    
+    class Meta:
+        verbose_name = 'Parcela'
+        verbose_name_plural = 'Parcelas'
+        
+
+class Tasa(models.Model):
+    nombre = models.CharField(max_length=100, blank= False, null=False)
+    zona = models.ForeignKey(Zona, on_delete=models.PROTECT)
+    periodicidad = models.ForeignKey(Periodicidad, on_delete=models.PROTECT)
+    monto = models.FloatField(blank=False, null=False)
+    fecha_desde = models.DateTimeField(blank=False, null=False)
+    fecha_hasta = models.DateTimeField(blank=False, null=False)
+    
+    def __str__(self):
+        return self.nombre
+        
+    class Meta:
+        verbose_name = 'Tasa'
+        verbose_name_plural = 'Tasas'
+        
+
+class Recibo(models.Model):
+    numero_recibo = models.IntegerField(blank=False, null=False)
+    monto_tasa = models.FloatField(blank=False,null=False)
+    monto_recargo = models.FloatField(blank=True,null=True)    
